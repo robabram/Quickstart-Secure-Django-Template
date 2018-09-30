@@ -28,4 +28,6 @@ Configurations are available for NGINX using FastCGI and UWSGI.
 
 Basic user management web pages are available to allow creating, editing and deleting system users. This has integration with Oauth2.   
 
- 
+**Authenticated and Non-Authenticated Templates**
+
+All pages source a top level template from the 'templates' directory for pages where the user has authenticated or not. 
