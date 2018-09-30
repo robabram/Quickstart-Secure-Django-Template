@@ -11,6 +11,8 @@ This project uses the _django-oauth-toolkit_ to enable Oauth2 user authenticatio
 encrypted and decrypted at the server. A custom middleware is provided that automates the encrypting, 
 decrypting and refreshing of Oauth2 tokens.
 
+Views need only to have the appropriate django security function decorators.  
+
 
 **REST API w/ Swagger Documentation**
 
