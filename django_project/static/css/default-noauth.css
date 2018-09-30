@@ -1,0 +1,49 @@
+/*
+#
+# Author: Robert Abram <rabram991@gmail.com>
+#
+# This file is subject to the terms and conditions defined in the
+# file 'LICENSE', which is part of this source code package.
+#
+*/
+
+body {
+    font-family: Helvetica,Arial,sans-serif;
+    background-color: #fff;
+    padding: 0px;
+    margin: 0px;
+    background: url("/static/images/water-background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#form-title {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+#login-form-div .container {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    background-color: #333;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#login-form label {
+    color: #333;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.35);
+    color: #333;
+    text-align: center;
+}

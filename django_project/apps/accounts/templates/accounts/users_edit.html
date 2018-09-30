@@ -1,0 +1,285 @@
+{% extends "accounts/__base.html" %}
+{% load i18n %}
+{% load form_messages %}
+
+{% block headtitle %}{% trans 'Users &middot; Edit' noop %}{% endblock %}
+
+{% block page-content %}
+
+  <header class="header">
+    <ol class="breadcrumb">
+      <li>{% trans "System" %}</li>
+      <li><a href="{% url 'accounts:accounts_list_users' %}">{% trans "Users" %}</a></li>
+      <li>{% if can_edit %}{% trans "Edit" %}{% else %}{% trans "View" %}{% endif %}</li>
+    </ol>
+  </header>
+
+  {% for message in messages %}{{ message|form_message }}{% endfor %}
+
+
+  <div style="margin-bottom: 10px; display: block;">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav navbar-right" style="padding-right: 15px;">
+        <li>
+          <div class="btn-group">
+            {% if can_edit %}
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AjaxChangePasswordModalDialog">
+              <i class="fa fa-key icon-embed-btn"></i> Change Password
+            </button>
+            {% endif %}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <form id="user-edit-form" method="post" class="form-horizontal">
+    {% csrf_token %}
+
+    <div class="panel panel-default nav-section nav-section-user" {% if active_tab != 'user' %}style="display: none"{% endif %}>
+      <div class="panel-heading">
+        <h2 class="panel-title">{% if can_edit %}{% trans "Edit User" %}{% else %}{% trans "View User" %}{% endif %}</h2></div>
+      <div class="panel-body">
+
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label"> {{ form.is_active.label_tag }} </label>
+          <div class="col-sm-9">
+            {% if can_edit %}
+              <label class="checkbox-label">
+              {% if user_id != '1' %}
+                {{ form.is_active }}
+                <span class="checkbox-label-text">{% trans 'Enable this User' %}</span>
+                <span class="help-block" style="font-weight: normal;">{{ form.is_active.help_text }}</span>
+              {% else %}
+                <label class="control-value-label">Yes</label>
+                <span class="help-block" style="font-weight: normal;">{% trans "This user cannot be disabled." %}</span>
+              {% endif %}
+              </label>
+
+            {% else %}
+              <label class="control-value-label">{% if form.is_active.value %}{% trans 'Yes' %}{% else %}{% trans 'No' %}{% endif %}</label>
+            {% endif %}
+          </div>
+          <div class="col-sm-1">&nbsp;</div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label"> {{ form.username.label_tag }} </label>
+          <div class="col-sm-10">
+            {% if can_edit %}
+              {{ form.username }}
+              <span class="help-block">{{ form.username.help_text }}</span>
+              <span>{{ form.username.errors }}</span>
+            {% else %}
+              <label class="control-value-label">{{ form.username.value }}</label>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label"> {{ form.first_name.label_tag }} </label>
+          <div class="col-sm-10">
+            {% if can_edit %}
+              {{ form.first_name }}
+              <span class="help-block">{{ form.first_name.help_text }}</span>
+              <span>{{ form.username.errors }}</span>
+            {% else %}
+              <label class="control-value-label">{{ form.first_name.value }}</label>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label"> {{ form.last_name.label_tag }} </label>
+          <div class="col-sm-10">
+            {% if can_edit %}
+              {{ form.last_name }}
+              <span class="help-block">{{ form.last_name.help_text }}</span>
+              <span>{{ form.last_name.errors }}</span>
+            {% else %}
+              <label class="control-value-label">{{ form.last_name.value }}</label>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="form-group{% if user_id == '1' %} form-group-last{% endif %}">
+          <label class="col-sm-2 control-label"> {{ form.email.label_tag }} </label>
+          <div class="col-sm-10">
+            {% if can_edit %}
+              {{ form.email }}
+              <span class="help-block">{{ form.email.help_text }}</span>
+              <span>{{ form.email.errors }}</span>
+            {% else %}
+              <label class="control-value-label">{{ form.email.value }}</label>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label"> {{ form.page_size.label_tag }} </label>
+          <div class="col-sm-10">
+            {% if can_edit %}
+                {{ form.page_size }}
+              <span class="help-block">{{ form.page_size.help_text }}</span>
+              <span>{{ form.page_size.errors }}</span>
+            {% else %}
+              <label class="control-value-label">{{ form.page_size.value }}</label>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label"> {{ form.timezone.label_tag }} </label>
+          <div class="col-sm-10">
+            {% if can_edit %}
+                {{ form.timezone }}
+              <span class="help-block">{{ form.timezone.help_text }}</span>
+              <span>{{ form.timezone.errors }}</span>
+            {% else %}
+              <label class="control-value-label">{{ form.timezone.value }}</label>
+            {% endif %}
+          </div>
+        </div>
+
+        {% if user_id != '1' %}
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label"> {{ form.oauth_scope.label_tag }} </label>
+          <div class="col-sm-10">
+            {% if can_edit %}
+                {{ form.oauth_scope }}
+              <span class="help-block">{{ form.oauth_scope.help_text }}</span>
+              <span>{{ form.oauth_scope.errors }}</span>
+            {% else %}
+              <label class="control-value-label">{{ form.oauth_scope.value }}</label>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label"> {{ form.api_access.label_tag }} </label>
+          <div class="col-sm-9">
+            {% if can_edit %}
+              <label class="checkbox-label">
+                {{ form.api_access }}
+                <span class="checkbox-label-text">{% trans 'Enable API access for this User' %}</span>
+              </label>
+            {% else %}
+              <label class="control-value-label">{% if form.api_access.value %}{% trans 'Yes' %}{% else %}{% trans 'No' %}{% endif %}</label>
+            {% endif %}
+          </div>
+          <div class="col-sm-1">&nbsp;</div>
+        </div>
+
+        <div class="form-group form-group-last">
+          <label class="col-sm-2 control-label"> {{ form.api_code.label_tag }} </label>
+          <div class="col-sm-9">
+            <label class="control-value-label">{% if not form.api_code.value %} {% else %}{{ form.api_code.value }}{% endif %}</label>
+          </div>
+          <div class="col-sm-1">&nbsp;</div>
+        </div>
+
+        {% endif %}
+
+      </div>
+    </div>
+
+    {% if can_edit %}
+      <div class="col-sm-10 col-sm-offset-2">
+        <div class="btn-group btn-group-bottom">
+          <button id="save" class="btn btn-primary" type="submit" value="{% trans 'Save' %}" name="save">
+          <i class="fa fa-save icon-embed-btn"> </i> {% trans 'Save' %} </button>
+        </div>
+      </div>
+    {% endif %}
+  </form>
+
+   <!-- Start Modal Add Node Dialog -->
+  <div class="modal fade" id="AjaxChangePasswordModalDialog" role="dialog" aria-labelledby="modal_title" aria-hidden="true">
+    <div class="modal-dialog">
+
+      <form id="change-pwd-form" method="post" class="form-horizontal"
+            action="{% url 'accounts:ajax_accounts_change_password' user_id=user_id %}" >
+      {% csrf_token %}
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" id="modal_title"><span class="fa fa-2x fa-key"></span> {% trans "Change Password" %}</h4>
+        </div>
+        <div class="modal-body">
+
+            <div id="errors-modal"></div>
+
+            <div class="form-group">
+              <label class="col-sm-4 control-label"> {{ pwd_form.old_password.label_tag }} </label>
+              <div class="col-sm-6">
+                {{ pwd_form.old_password }}
+              </div>
+              <div class="col-sm-2">&nbsp;</div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-4 control-label"> {{ pwd_form.new_password.label_tag }} </label>
+              <div class="col-sm-6">
+                {{ pwd_form.new_password }}
+              </div>
+              <div class="col-sm-2">&nbsp;</div>
+            </div>
+
+            <div class="form-group form-group-last">
+              <label class="col-sm-4 control-label"> {{ pwd_form.new_password2.label_tag }} </label>
+              <div class="col-sm-6">
+                {{ pwd_form.new_password2 }}
+              </div>
+              <div class="col-sm-2">&nbsp;</div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+          <div class="btn-group">
+            <button id="dialog-add-button" type="button" class="btn btn-default">{% trans "Change" %}</button>
+            <button id="dialog-cancel-button" type="button" class="btn btn-default" data-dismiss="modal">{% trans "Cancel" %}</button>
+          </div>
+          <button id="dialog-close-button" type="button" class="btn btn-default" data-dismiss="modal" style="display: none;">{% trans "Close" %}</button>
+        </div>
+      </div>
+      </form>
+
+    </div>
+  </div>
+  <!-- End Modal Add Node Dialog -->
+
+{% endblock page-content %}
+
+{% block script %}
+
+<script>
+
+$('#dialog-add-button').click(function() {
+    /* https://github.com/malsup/form/ */
+    $('#change-pwd-form').ajaxSubmit(
+    {
+        type: 'post',
+        dataType: 'json',
+        success: function (data) {
+            if (data.status == 'OK') {
+                $('#errors-modal').html(data.message);
+                $('#dialog-add-button').hide();
+                $('#dialog-cancel-button').hide();
+                $('#dialog-close-button').show();
+            } else {
+                $('#errors-modal').html(data.message);
+            }
+
+        },
+        error: function () {
+            $('#errors-modal').html("<div class=\"alert alert-danger alert-dismissable fade in\"><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a> <strong>Error:</strong> An unknown error occurred, please refresh page and try again</div>");
+        }
+    });
+});
+
+</script>
+
+{% endblock script %}

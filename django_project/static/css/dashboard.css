@@ -1,0 +1,39 @@
+/*
+#
+# Author: Robert Abram <rabram991@gmail.com>
+#
+# This file is subject to the terms and conditions defined in the
+# file 'LICENSE', which is part of this source code package.
+#
+*/
+
+#widget-system-info {
+
+}
+
+.widget-panel .panel-title {
+    line-height: 1.0;
+}
+
+.widget-panel table > tbody > tr > th {
+    width: 27%;
+    font-size: 14px;
+    vertical-align: top;
+    padding-top: 7px;
+}
+
+.widget-panel table > tbody > tr > td {
+    text-align: left;
+    padding-right: 10px;
+    font-size: 14px;
+    padding-top: 5px;
+    vertical-align: top;
+}
+
+#update-status {
+    font-size: 14px;
+}
+
+#update-status i {
+    font-size: 18px;
+}

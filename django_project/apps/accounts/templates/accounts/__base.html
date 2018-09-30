@@ -1,0 +1,28 @@
+{% extends "__auth_base.html" %}
+{% load staticfiles %}
+{% load smarturl %}
+{% load i18n %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/placeholder.css' %}" />
+{% endblock stylesheet %}
+
+{% block content %}
+
+<div class="container static">
+{% block page-content %}{% endblock page-content %}
+</div>
+
+{% endblock content %}
+
+{% block app-base-script %}
+
+    $(function () {
+      sdsys.set_env({'app':'accounts'});
+      $('[data-toggle="popover"]').popover()
+    });
+
+{% endblock app-base-script %}
+
+
+

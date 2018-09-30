@@ -1,0 +1,8 @@
+# Add requirements only needed for your unittests and during development here.
+# They will be installed automatically when running `python setup.py test`.
+pytest-cov
+pytest
+pytest-pythonpath
+tox
+testfixtures
+pytest-django
