@@ -34,4 +34,8 @@ All pages source a top level template from the 'templates' directory for pages w
 
 **Basic Oauth2 Unit Tests**
 
-There are example unit tests to support testing when Oauth2 authentication is used. 
+There are example unit tests to support testing when Oauth2 authentication is used.
+
+**Support for Celery tasks**
+
+This project also has support for Celery tasks, see proj.settings.celery
