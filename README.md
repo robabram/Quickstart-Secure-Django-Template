@@ -22,7 +22,7 @@ proj.api_viewsets.py which can add various features to APIs.
 
 **NGINX Configuration**
 
-Configurations are available for NGINX using FastCGI and UWSGI.
+A NGINX web server configuration is available using FastCGI and UWSGI.
 
 **Basic User Management**
 
@@ -32,7 +32,7 @@ Basic user management web pages are available to allow creating, editing and del
 
 All pages source a top level template from the 'templates' directory for pages where the user has authenticated or not.
 
-**Basic Oauth2 Unit Tests**
+**Oauth2 Unit Tests**
 
 There are example unit tests to support testing when Oauth2 authentication is used.
 
