@@ -30,4 +30,8 @@ Basic user management web pages are available to allow creating, editing and del
 
 **Authenticated and Non-Authenticated Templates**
 
-All pages source a top level template from the 'templates' directory for pages where the user has authenticated or not. 
+All pages source a top level template from the 'templates' directory for pages where the user has authenticated or not.
+
+**Basic Oauth2 Unit Tests**
+
+There are example unit tests to support testing when Oauth2 authentication is used. 
