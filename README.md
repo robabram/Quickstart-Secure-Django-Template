@@ -1,7 +1,7 @@
 # Quick start Secure Django Project Template
 
 This is free quick start template for a secure Django web application using OAuth2 with server side encrypted tokens. 
-This template has all my favorite bits for a good Django web site.  Questions and contributions are welcome.  
+This template has all my favorite bits for a good secure Django web site.  Questions and contributions are welcome.  
 
 ### Quick Start
 
