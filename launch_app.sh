@@ -10,8 +10,8 @@
 # Project Quickstart Script.
 #
 # This script will check for project in the current directory, if it does not exist
-# it will download the project from Github and unzip it. Then it will create a python
-# Virtual Environment, update it with the required packages.  Last it will initialize
+# it will clone the project from Github. Then it will create a python Virtual
+# Environment, update it with the required packages.  Last it will initialize
 # a Sqlite3 database and configure Oauth3.  After that it is ready to launch the
 # django test server.
 #
@@ -124,6 +124,7 @@ test_project_dir
 if [ $FNR -ne 0 ]; then
     download_project
 
+    # check if cloning the project failed
     if [ $FNR -ne 0 ]; then
         return
     fi

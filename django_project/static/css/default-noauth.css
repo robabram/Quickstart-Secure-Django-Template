@@ -9,9 +9,6 @@
 
 body {
     font-family: Helvetica,Arial,sans-serif;
-    background-color: #fff;
-    padding: 0px;
-    margin: 0px;
     background: url("/static/images/water-background.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -24,22 +21,24 @@ body {
     padding-top: 10px;
 }
 
-#login-form-div .container {
-    position: absolute;
-    top: 15%;
-    width: 100%;
-    background-color: #333;
-    /* background-color: rgba(0, 0, 0, 0.3); */
-    padding-bottom: 20px;
-    padding-top: 20px;
-}
-
 #login-form label {
     color: #333;
 }
 
+#login-warning {
+    color: red;
+    margin-bottom: 6px;
+    display: none;
+}
+
+.login-container {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
 .footer {
     position: fixed;
+    font-size: 0.85rem;
     left: 0;
     bottom: 0;
     width: 100%;

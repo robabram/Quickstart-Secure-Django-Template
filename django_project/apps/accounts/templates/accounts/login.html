@@ -5,54 +5,60 @@
 
 {% block content %}
 
-    <div id="form-title" style="color: #ccc;"><h3>Secure Django Template with REST API</h3></div>
-    <div id="login-form-div">
-        <form id="login-form">
-        {% csrf_token %}
-        <div class="container w-100 mw-100" style="background: rgba(255,255,255,0.35);">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="brand">&nbsp;</div>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-6 login">
-                    <div class="form-horizontal">
+  <div id="form-title" style="color: #ccc;"><h3>Secure Django Template</h3></div>
+     <div class="row container-fluid login-container">
+      <div class="col-md-12">
+        <h2 class="text-center mb-4 d-none d-md-block">&nbsp;</h2>
+        <div class="row">
+          <div class="col-md-8 col-lg-4 mx-auto">
 
-                        <div id="login-warning" style="display: none" class="form-group">
-                            <div class="col-sm-3 col-md-3 control-label">
-                                <label class="" name="validation"> </label>
-                            </div>
-                            <div class="col-sm-9 col-md-9 controls">
-                                <div class="alert alert-danger">
-                                    <span class="glyphicon glyphicon-alert"></span>&nbsp;&nbsp;<strong>Your username and password didn't match. Please try again.</strong>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-12 col-md-9 col-lg-7 form-group">
-                            {{ form.username.label_tag }}
-                            {{ form.username }}
-                        </div>
-                        <div class="col-sm-12 col-md-9 col-lg-7 form-group">
-                            {{ form.password.label_tag }}
-                            {{ form.password }}
-                        </div>
+            <!-- form card login -->
+            <div class="card rounded-2">
+              <div class="card-header">
+                <h3 class="mb-0">Login Form</h3>
+              </div>
+              <div class="card-body">
+                <div id="login-warning">Username or password is invalid, please try again</div>
+                <form class="form" role="form" autocomplete="off" id="login-form" method="POST">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    {{ form.username.label_tag }}
+                    <div class="input-group mb-3">
+                      <div class="input-group-text fas fa-user">&nbsp;</div>
+                      {{ form.username }}
                     </div>
-                </div>
-                <div class="col-sm-5 col-md-5 col-lg-6 login details">
-                    <!--
-                    <span class="glyphicon glyphicon-alert"></span>&nbsp;&nbsp;<label style="color: #333;">To login enter your user name and password, then click login.</label>
-                    -->
-                </div>
+                    <div class="invalid-feedback">Please enter your username</div>
+                  </div>
+                  <div class="form-group">
+                    {{ form.password.label_tag }}
+                    <div class="input-group mb-3">
+                      <div class="input-group-text fas fa-lock">&nbsp;</div>
+                      {{ form.password }}
+                    </div>
+                    <div class="invalid-feedback">Please enter your password</div>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck" name="remember-me">
+                    <label class="custom-control-label" for="customCheck">Remember me on this computer</label>
+                  </div>
+
+                  <input type="hidden" name="next" value="{{ next }}" />
+                  <button id="btn-submit" class="btn btn-default btn-primary float-right" name="login" title="{% trans 'Login' noop %}" type="submit"><i class="fas fa-unlock"></i> {% trans 'Login' noop %}</button>
+                </form>
+              </div>
+              <div class="card-footer"><span class="float-right">Powered by Salt</span></div>
+              <!--/card-block-->
             </div>
-            <div class="row">
-                <div class="col-sm-12 col-md-offset-5 col-md-7 submit">
-                    <input type="hidden" name="next" value="{{ next }}" />
-                    <button id="btn-submit" class="btn btn-default btn-primary" name="login" title="{% trans 'Login' noop %}" type="submit"><i class="fa fa-lock"></i> {% trans 'Login' noop %}</button>
-                </div>
-            </div>
+            <!-- /form card login -->
+
+          </div>
         </div>
-        </form>
+        <!--/row-->
+
+      </div>
+      <!--/col-->
     </div>
+    <!--/row-->
 
 {% endblock content %}
 
@@ -101,13 +107,17 @@ $('#login-form').submit( function (e) {
             /* }); */
 
         } else
-            $('#login-warning').css('display', '')
+            $('#login-warning').show();
+            $('#{{ form.username.id_for_label }}').focus();
+            $('#{{ form.username.id_for_label }}').val('');
+            $('#{{ form.password.id_for_label }}').val('');
+            $('#login-form')[0].reset();
     }, "json")
 
 });
 
 $(document).ready(function () {
-    document.getElementById("{{ form.username.id_for_label }}").focus();
+    $('#{{ form.username.id_for_label }}').focus();
 });
 
 </script>
