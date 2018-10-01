@@ -10,8 +10,10 @@
 # Project Quickstart Script.
 #
 # This script will check for project in the current directory, if it does not exist
-# it will download the project from Github and unzip it.
-#
+# it will download the project from Github and unzip it. Then it will create a python
+# Virtual Environment, update it with the required packages.  Last it will initialize
+# a Sqlite3 database and configure Oauth3.  After that it is ready to launch the
+# django test server.
 #
 
 echo -e "\nLaunching Quickstart Secure Django Template project\n"
