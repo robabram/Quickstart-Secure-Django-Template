@@ -3,6 +3,17 @@
 This is free quick start template for a secure Django web application using OAuth2 with server side encrypted tokens. 
 This template has all my favorite bits for a good secure Django web site.  Questions and contributions are welcome.  
 
+### Quick Feature List
+
+*Note: Features are explained in more detail below* 
+
+* Oauth2 authentication with server side encrypting/decrypting/refreshing of tokens.
+* REST API with auto documenation using Swagger.
+* NGINX configuration using FastCGI and UWSGI.
+* Oauth2 unit tests
+* Celery configuration
+* Bootstrap 4
+
 ### Quick Start
 
 *Note: Please use Python 3.x for these instructions*
