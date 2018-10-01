@@ -78,11 +78,6 @@ test_project_dir () {
 
 download_project () {
 
-    if [ $? -ne 0 ]; then
-       echo "error: unable to locate 'git' executable, please install 'git' to continue."
-       FNR=1
-    fi
-
     echo "cloning project..."
 
     $($GIT clone "https://github.com/robabram/Quickstart-Secure-Django-Template.git")
