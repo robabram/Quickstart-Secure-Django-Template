@@ -67,7 +67,7 @@ proj.api_viewsets.py which can add various features to APIs.
 
 **NGINX Configuration**
 
-A NGINX web server configuration is available using FastCGI and UWSGI.
+A NGINX web server configuration is available using FastCGI and UWSGI. SSL configuration will get an 'A+' on Qualys SSL test. 
 
 **Basic User Management**
 
