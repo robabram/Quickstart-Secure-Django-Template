@@ -48,6 +48,8 @@ This template has all my favorite bits for a good secure Django web site.  Quest
 
 11. Run Django server: `python3 manage.py runserver`
 
+*Note: The default login credentials are: admin/password. These can be changed in proj.settings.base*
+
 ### Features    
 
 **Secure Oauth2 User Authentication**
