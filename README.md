@@ -11,6 +11,8 @@ This template has all my favorite bits for a good Django web site.  Questions an
 
 1. `source <()curl -s https://raw.githubusercontent.com/robabram/Quickstart-Secure-Django-Template/master/launch_app.sh)`
 
+#####Manual Quick Start Steps
+
 1. Clone project to local directory.
 
 2. Change directory to git project root directory (Quickstart-Secure-Django-Template).
@@ -31,7 +33,7 @@ This template has all my favorite bits for a good Django web site.  Questions an
 
 9. Run django migrate: `python3 manage.py migrate`
 
-10. Run admin command to setup Oauth: `python manage.py admin --setup`
+10. Run admin command to setup Oauth: `python manage.py admin --init-oauth`
 
 11. Run Django server: `python3 manage.py runserver`
 
