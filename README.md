@@ -9,7 +9,7 @@ This template has all my favorite bits for a good Django web site.  Questions an
 
 #####Run Quick Start Script
 
-1. `source <()curl -s )`
+1. `source <()curl -s https://raw.githubusercontent.com/robabram/Quickstart-Secure-Django-Template/master/launch_app.sh)`
 
 1. Clone project to local directory.
 
