@@ -3,15 +3,15 @@
 This is free quick start template for a secure Django web application using OAuth2 with server side encrypted tokens. 
 This template has all my favorite bits for a good Django web site.  Questions and contributions are welcome.  
 
-###Quick Start
+### Quick Start
 
 *Note: Please use Python 3.x for these instructions*
 
-#####Run Quick Start Script
+##### Run Quick Start Script
 
 1. `source <()curl -s https://raw.githubusercontent.com/robabram/Quickstart-Secure-Django-Template/master/launch_app.sh)`
 
-#####Manual Quick Start Steps
+##### Manual Quick Start Steps
 
 1. Clone project to local directory.
 
@@ -37,7 +37,7 @@ This template has all my favorite bits for a good Django web site.  Questions an
 
 11. Run Django server: `python3 manage.py runserver`
 
-###Features    
+### Features    
 
 **Secure Oauth2 User Authentication**
 
