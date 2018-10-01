@@ -3,7 +3,39 @@
 This is free quick start template for a secure Django web application using OAuth2 with server side encrypted tokens. 
 This template has all my favorite bits for a good Django web site.  Questions and contributions are welcome.  
 
-This project includes the following features.    
+###Quick Start
+
+*Note: Please use Python 3.x for these instructions*
+
+#####Run Quick Start Script
+
+1. `source <()curl -s )`
+
+1. Clone project to local directory.
+
+2. Change directory to git project root directory (Quickstart-Secure-Django-Template).
+
+3. Create a new Virtual Environment: `python3 -m venv venv`
+
+3. Activate VE: `source ./venv/bin/activate`
+
+4. Update PIP to latest: `pip install --update pip`
+
+5. Install required packages: `pip install -r requirements.txt` 
+
+6. Set PYTHONPATH var: ``export PYTHONPATH=`pwd` ``
+
+7. Set DJANGO_SETTINGS_MODULE var: ``export DJANGO_SETTINGS_MODULE="proj.settings.local"`` 
+
+8. Change directory to Django project: `cd django_project`
+
+9. Run django migrate: `python3 manage.py migrate`
+
+10. Run admin command to setup Oauth: `python manage.py admin --setup`
+
+11. Run Django server: `python3 manage.py runserver`
+
+###Features    
 
 **Secure Oauth2 User Authentication**
 
