@@ -10,9 +10,9 @@ This template has all my favorite bits for a good secure Django web site.  Quest
 * Oauth2 authentication with server side encrypting/decrypting/refreshing of tokens.
 * REST API with auto documenation using Swagger.
 * NGINX configuration using FastCGI and UWSGI.
-* Oauth2 unit tests
-* Celery configuration
-* Bootstrap 4
+* Oauth2 unit test templates.
+* Celery configuration.
+* Bootstrap 4.
 
 ### Quick Start
 
