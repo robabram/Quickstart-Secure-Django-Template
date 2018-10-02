@@ -62,7 +62,7 @@ class APIAuthentication(authentication.BaseAuthentication):
                 profile = UserProfile.objects.get(api_code=m_key)
 
                 if profile.user.is_active is True and profile.api_access is True:
-                    return True
+                    return (profile.user, m_key)
 
             except ObjectDoesNotExist:
                 pass
