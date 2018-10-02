@@ -144,6 +144,9 @@ python3 manage.py migrate
 echo -e "info: checking project oauth2 settings..."
 python3 manage.py admin --init-oauth
 
+echo -e "info: loading example api data fixture..."
+python3 manage.py loaddata apps/api_example/fixtures/testdata.json
+
 echo -e "info: project is ready to run."
 echo -e "info: now type 'python3 manage.py runserver' to launch application."
 

@@ -5,12 +5,60 @@
 
 {% block page-content %}
 
-  <ol class="breadcrumb">
-    <li>Status</li>
-    <li>Dashboard</li>
-  </ol>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">System</li>
+      <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'dashboard:overview' %}">Dashboard</a></li>
+    </ol>
+  </nav>
 
-  <p>Dashboard Page</p>
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6" style="padding-bottom: 10px;">
+          <div class="card">
+            <div class="card-header bg-info font-weight-bold text-uppercase" style="color:white;">
+              User Management
+            </div>
+            <div class="card-body" style="height: 150px;">
+              <p class="" style="vertical-align: top;">Manage users who may use system or access APIs</p>
+              <a href="{% url 'accounts:accounts_list_users' %}" class="btn btn-primary float-right" style="position: absolute; right: 15px; bottom: 15px;">
+                <i class="fas fa-users icon-embed-btn"></i> {% trans 'Manage Users' %}
+              </a>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6" style="padding-bottom: 10px;">
+          <div class="card">
+            <div class="card-header bg-success font-weight-bold text-uppercase" style="color:white;">
+              View REST API using Django Rest Framework
+            </div>
+            <div class="card-body" style="height: 150px;">
+              <p class="" style="vertical-align: top;">Show the example API using the Django Rest Framework view.</p>
+              <a href="/api/" class="btn btn-primary float-right" style="position: absolute; right: 15px; bottom: 15px;">
+                <i class="fas fa-search icon-embed-btn"></i> {% trans 'View API' %}
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6" style="padding-bottom: 10px;">
+          <div class="card">
+            <div class="card-header bg-warning font-weight-bold text-uppercase" style="color:white;">
+              View REST API using Swagger
+            </div>
+            <div class="card-body" style="height: 150px;">
+              <p class="" style="vertical-align: top;">View the example API using Swagger. Swagger automatically documents Django APIs.</p>
+              <a href="/api/docs/" class="btn btn-primary float-right" style="position: absolute; right: 15px; bottom: 15px;">
+                <i class="fas fa-users icon-embed-btn"></i> {% trans 'View Swagger Docs' %}
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+    <p>&nbsp;</p>
+  </div>
 
 {% endblock page-content %}
 

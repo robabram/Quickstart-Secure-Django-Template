@@ -47,6 +47,7 @@ UTC_OFFSETS = [("-14:00", "-14:00"), ("-13:00", "-13:00"), ("-12:00", "-12:00"),
                ("+10:00", "+10:00"), ("+10:30", "+10:30"), ("+11:00", "+11:00"), ("+12:00", "+12:00"),
                ("+12:45", "+12:45"), ]
 
+
 def generate_api_code():
     return ''.join(random.SystemRandom().choice(string.ascii_lowercase + string.digits + '$!^') for _ in range(35))
 

@@ -7,6 +7,10 @@
 #
 */
 
+html {
+    font-size: 14px;
+}
+
 .help-block {
     margin-bottom: 0;
     font-size: 0.85rem;

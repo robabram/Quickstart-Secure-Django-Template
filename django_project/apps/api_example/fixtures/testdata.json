@@ -1,0 +1,422 @@
+[
+	{
+      "model": "api_example.temps",
+      "pk": 1,
+      "fields": {
+        "created": "2011-10-02 18:00:00",
+        "modified": "2011-10-02 18:00:00",
+        "date": "2011-10-01",
+        "new_york": 63.4,
+        "san_francisco": 62.7,
+        "austin": 72.2
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 2,
+      "fields": {
+        "created": "2011-10-03 18:00:00",
+        "modified": "2011-10-03 18:00:00",
+        "date": "2011-10-02",
+        "new_york": 58,
+        "san_francisco": 59.9,
+        "austin": 67.7
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 3,
+      "fields": {
+        "created": "2011-10-04 18:00:00",
+        "modified": "2011-10-04 18:00:00",
+        "date": "2011-10-03",
+        "new_york": 53.3,
+        "san_francisco": 59.1,
+        "austin": 69.4
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 4,
+      "fields": {
+        "created": "2011-10-05 18:00:00",
+        "modified": "2011-10-05 18:00:00",
+        "date": "2011-10-04",
+        "new_york": 55.7,
+        "san_francisco": 58.8,
+        "austin": 68
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 5,
+      "fields": {
+        "created": "2011-10-06 18:00:00",
+        "modified": "2011-10-06 18:00:00",
+        "date": "2011-10-05",
+        "new_york": 64.2,
+        "san_francisco": 58.7,
+        "austin": 72.4
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 6,
+      "fields": {
+        "created": "2011-10-07 18:00:00",
+        "modified": "2011-10-07 18:00:00",
+        "date": "2011-10-06",
+        "new_york": 58.8,
+        "san_francisco": 57,
+        "austin": 77
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 7,
+      "fields": {
+        "created": "2011-10-08 18:00:00",
+        "modified": "2011-10-08 18:00:00",
+        "date": "2011-10-07",
+        "new_york": 57.9,
+        "san_francisco": 56.7,
+        "austin": 82.3
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 8,
+      "fields": {
+        "created": "2011-10-09 18:00:00",
+        "modified": "2011-10-09 18:00:00",
+        "date": "2011-10-08",
+        "new_york": 61.8,
+        "san_francisco": 56.8,
+        "austin": 78.9
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 9,
+      "fields": {
+        "created": "2011-10-10 18:00:00",
+        "modified": "2011-10-10 18:00:00",
+        "date": "2011-10-09",
+        "new_york": 69.3,
+        "san_francisco": 56.7,
+        "austin": 68.8
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 10,
+      "fields": {
+        "created": "2011-10-11 18:00:00",
+        "modified": "2011-10-11 18:00:00",
+        "date": "2011-10-10",
+        "new_york": 71.2,
+        "san_francisco": 60.1,
+        "austin": 68.7
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 11,
+      "fields": {
+        "created": "2011-10-12 18:00:00",
+        "modified": "2011-10-12 18:00:00",
+        "date": "2011-10-11",
+        "new_york": 68.7,
+        "san_francisco": 61.1,
+        "austin": 70.3
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 12,
+      "fields": {
+        "created": "2011-10-13 18:00:00",
+        "modified": "2011-10-13 18:00:00",
+        "date": "2011-10-12",
+        "new_york": 61.8,
+        "san_francisco": 61.5,
+        "austin": 75.3
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 13,
+      "fields": {
+        "created": "2011-10-14 18:00:00",
+        "modified": "2011-10-14 18:00:00",
+        "date": "2011-10-13",
+        "new_york": 63,
+        "san_francisco": 64.3,
+        "austin": 76.6
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 14,
+      "fields": {
+        "created": "2011-10-15 18:00:00",
+        "modified": "2011-10-15 18:00:00",
+        "date": "2011-10-14",
+        "new_york": 66.9,
+        "san_francisco": 67.1,
+        "austin": 66.6
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 15,
+      "fields": {
+        "created": "2011-10-16 18:00:00",
+        "modified": "2011-10-16 18:00:00",
+        "date": "2011-10-15",
+        "new_york": 61.7,
+        "san_francisco": 64.6,
+        "austin": 68
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 16,
+      "fields": {
+        "created": "2011-10-17 18:00:00",
+        "modified": "2011-10-17 18:00:00",
+        "date": "2011-10-16",
+        "new_york": 61.8,
+        "san_francisco": 61.6,
+        "austin": 70.6
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 17,
+      "fields": {
+        "created": "2011-10-18 18:00:00",
+        "modified": "2011-10-18 18:00:00",
+        "date": "2011-10-17",
+        "new_york": 62.8,
+        "san_francisco": 61.1,
+        "austin": 71.1
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 18,
+      "fields": {
+        "created": "2011-10-19 18:00:00",
+        "modified": "2011-10-19 18:00:00",
+        "date": "2011-10-18",
+        "new_york": 60.8,
+        "san_francisco": 59.2,
+        "austin": 70
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 19,
+      "fields": {
+        "created": "2011-10-20 18:00:00",
+        "modified": "2011-10-20 18:00:00",
+        "date": "2011-10-19",
+        "new_york": 62.1,
+        "san_francisco": 58.9,
+        "austin": 61.6
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 20,
+      "fields": {
+        "created": "2011-10-21 18:00:00",
+        "modified": "2011-10-21 18:00:00",
+        "date": "2011-10-20",
+        "new_york": 65.1,
+        "san_francisco": 57.2,
+        "austin": 57.4
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 21,
+      "fields": {
+        "created": "2011-10-22 18:00:00",
+        "modified": "2011-10-22 18:00:00",
+        "date": "2011-10-21",
+        "new_york": 55.6,
+        "san_francisco": 56.4,
+        "austin": 64.3
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 22,
+      "fields": {
+        "created": "2011-10-23 18:00:00",
+        "modified": "2011-10-23 18:00:00",
+        "date": "2011-10-22",
+        "new_york": 54.4,
+        "san_francisco": 60.7,
+        "austin": 72.4
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 23,
+      "fields": {
+        "created": "2011-10-24 18:00:00",
+        "modified": "2011-10-24 18:00:00",
+        "date": "2011-10-23",
+        "new_york": 54.4,
+        "san_francisco": 65.1,
+        "austin": 72.4
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 24,
+      "fields": {
+        "created": "2011-10-25 18:00:00",
+        "modified": "2011-10-25 18:00:00",
+        "date": "2011-10-24",
+        "new_york": 54.8,
+        "san_francisco": 60.9,
+        "austin": 72.5
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 25,
+      "fields": {
+        "created": "2011-10-26 18:00:00",
+        "modified": "2011-10-26 18:00:00",
+        "date": "2011-10-25",
+        "new_york": 57.9,
+        "san_francisco": 56.1,
+        "austin": 72.7
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 26,
+      "fields": {
+        "created": "2011-10-27 18:00:00",
+        "modified": "2011-10-27 18:00:00",
+        "date": "2011-10-26",
+        "new_york": 54.6,
+        "san_francisco": 54.6,
+        "austin": 73.4
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 27,
+      "fields": {
+        "created": "2011-10-28 18:00:00",
+        "modified": "2011-10-28 18:00:00",
+        "date": "2011-10-27",
+        "new_york": 54.4,
+        "san_francisco": 56.1,
+        "austin": 70.7
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 28,
+      "fields": {
+        "created": "2011-10-29 18:00:00",
+        "modified": "2011-10-29 18:00:00",
+        "date": "2011-10-28",
+        "new_york": 42.5,
+        "san_francisco": 58.1,
+        "austin": 56.8
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 29,
+      "fields": {
+        "created": "2011-10-30 18:00:00",
+        "modified": "2011-10-30 18:00:00",
+        "date": "2011-10-29",
+        "new_york": 40.9,
+        "san_francisco": 57.5,
+        "austin": 51
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 30,
+      "fields": {
+        "created": "2011-10-31 18:00:00",
+        "modified": "2011-10-31 18:00:00",
+        "date": "2011-10-30",
+        "new_york": 38.6,
+        "san_francisco": 57.7,
+        "austin": 54.9
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 31,
+      "fields": {
+        "created": "2011-11-01 18:00:00",
+        "modified": "2011-11-01 18:00:00",
+        "date": "2011-10-31",
+        "new_york": 44.2,
+        "san_francisco": 55.1,
+        "austin": 58.8
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 32,
+      "fields": {
+        "created": "2011-11-02 18:00:00",
+        "modified": "2011-11-02 18:00:00",
+        "date": "2011-11-01",
+        "new_york": 49.6,
+        "san_francisco": 57.9,
+        "austin": 62.6
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 33,
+      "fields": {
+        "created": "2011-11-03 18:00:00",
+        "modified": "2011-11-03 18:00:00",
+        "date": "2011-11-02",
+        "new_york": 47.2,
+        "san_francisco": 64.6,
+        "austin": 71
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 34,
+      "fields": {
+        "created": "2011-11-04 18:00:00",
+        "modified": "2011-11-04 18:00:00",
+        "date": "2011-11-03",
+        "new_york": 50.1,
+        "san_francisco": 56.2,
+        "austin": 58.4
+      }
+	},
+	{
+      "model": "api_example.temps",
+      "pk": 35,
+      "fields": {
+        "created": "2011-11-05 18:00:00",
+        "modified": "2011-11-05 18:00:00",
+        "date": "2011-11-04",
+        "new_york": 50.1,
+        "san_francisco": 50.5,
+        "austin": 45.1
+      }
+	}
+]

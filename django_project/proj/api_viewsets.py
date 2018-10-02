@@ -6,7 +6,7 @@
 #
 from collections import OrderedDict
 
-from rest_framework.decorators import list_route
+from rest_framework.decorators import action
 from rest_framework.response import Response
 
 from proj.models import RecordCount
@@ -20,7 +20,7 @@ class ModelViewSetWithCount(viewsets.ModelViewSet):
     queryset = None
 
     # Return the Node model record count
-    @list_route(['get'])
+    @action(detail=False)
     def count(self, request):
         try:
             count = RecordCount(self.queryset.count())  # Models
@@ -38,7 +38,7 @@ class ReadOnlyModelViewSetWithCount(viewsets.ReadOnlyModelViewSet):
     queryset = None
 
     # Return the Node model record count
-    @list_route(['get'])
+    @action(detail=False)
     def count(self, request, count=None):
         try:
             if count is not None:
@@ -58,7 +58,7 @@ class ReadOnlyModelViewSetWithCountModified(ReadOnlyModelViewSetWithCount):
     """
     queryset = None
 
-    @list_route(['get'])
+    @action(detail=False)
     def modified(self, request, queryset=None, fields=None):
 
         items = []
@@ -72,7 +72,7 @@ class ReadOnlyModelViewSetWithCountModified(ReadOnlyModelViewSetWithCount):
             else:
                 fields = build_model_modified_field_list(queryset)
 
-            # Replica/Backup syncing relies on having Foreign Key values in output
+            # syncing relies on having Foreign Key values in output
             for item in queryset:
                 # values = {'id': item[0], 'modified': item[1]}
                 values = OrderedDict()

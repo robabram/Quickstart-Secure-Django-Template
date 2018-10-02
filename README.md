@@ -20,6 +20,8 @@ This template has all my favorite bits for a good secure Django web site.  Quest
 
 ##### Run Quick Start Script
 
+The Quick Start Script does all the manual steps listed below for you.
+
 1. `source <(curl -s https://raw.githubusercontent.com/robabram/Quickstart-Secure-Django-Template/master/launch_app.sh)`
 
 ##### Manual Quick Start Steps
@@ -44,9 +46,11 @@ This template has all my favorite bits for a good secure Django web site.  Quest
 
 9. Run django migrate: `python3 manage.py migrate`
 
-10. Run admin command to setup Oauth: `python manage.py admin --init-oauth`
+10. Load API test data: `python3 manage.py loaddata apps/api_example/fixtures/testdata.json`
 
-11. Run Django server: `python3 manage.py runserver`
+11. Run admin command to setup Oauth: `python manage.py admin --init-oauth`
+
+12. Run Django server: `python3 manage.py runserver`
 
 *Note: The default login credentials are: admin/password. These can be changed in proj.settings.base*
 

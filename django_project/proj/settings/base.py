@@ -75,6 +75,7 @@ INSTALLED_APPS = [
     'proj',
     'apps.accounts',
     'apps.dashboard',
+    'apps.api_example',
     'rest_framework_swagger',
     'rest_framework',
     'oauth2_provider',

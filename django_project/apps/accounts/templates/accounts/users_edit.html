@@ -54,13 +54,13 @@
                 </div>
                 <span class="help-block" style="font-weight: normal;">{{ form.is_active.help_text }}</span>
               {% else %}
-                <label class="control-value-label">Yes</label>
+                <label class="control-value-label">{% trans 'Enabled: Yes' %}</label>&nbsp;
                 <span class="help-block" style="font-weight: normal;">{% trans "This user cannot be disabled." %}</span>
               {% endif %}
 
 
             {% else %}
-              <label class="control-value-label">{% if form.is_active.value %}{% trans 'Yes' %}{% else %}{% trans 'No' %}{% endif %}</label>
+              <label class="control-value-label">{% trans 'Enabled: '%}{% if form.is_active.value %}{% trans 'Yes' %}{% else %}{% trans 'No' %}{% endif %}</label>
             {% endif %}
           </div>
         </div>
@@ -170,7 +170,7 @@
 
               <span class="checkbox-label-text"></span>
             {% else %}
-              <label class="control-value-label">{% if form.api_access.value %}{% trans 'Yes' %}{% else %}{% trans 'No' %}{% endif %}</label>
+              <label class="control-value-label">{% trans 'API Access: ' %}{% if form.api_access.value %}{% trans 'Yes' %}{% else %}{% trans 'No' %}{% endif %}</label>
             {% endif %}
           </div>
         </div>
@@ -188,12 +188,13 @@
     </div>
 
     {% if can_edit %}
-      <div class="col-sm-10 col-sm-offset-2">
-        <div class="btn-group btn-group-bottom">
-          <button id="save" class="btn btn-primary" type="submit" value="{% trans 'Save' %}" name="save">
-          <i class="fa fa-save icon-embed-btn"> </i> {% trans 'Save' %} </button>
-        </div>
+
+      <div class="btn-group btn-group-bottom">
+        <button id="save" class="btn btn-primary" type="submit" value="{% trans 'Save' %}" name="save">
+        <i class="fa fa-save icon-embed-btn"> </i> {% trans 'Save' %} </button>
       </div>
+      <p>&nbsp;</p>
+
     {% endif %}
   </form>
 

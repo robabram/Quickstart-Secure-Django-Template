@@ -25,6 +25,7 @@ from proj.swagger import get_swagger_view
 from proj.settings.base import SWAGGER_DOCS_TITLE
 
 from proj.api_viewsets import *
+from apps.api_example.api_viewsets import *
 
 admin.autodiscover()
 router = routers.DefaultRouter()
@@ -33,7 +34,7 @@ schema_view = get_swagger_view(title=SWAGGER_DOCS_TITLE)
 # API Notes:
 #     Non-Django model serializers must have 'base_name' manually set
 
-# router.register(r'path/to/api/view', APIViewSet, base_name='api-view-name-route')
+router.register(r'api_example/temps', TempsViewSet)
 
 urlpatterns = [
 

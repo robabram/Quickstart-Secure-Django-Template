@@ -6,7 +6,7 @@
 #
 
 #
-# Some enhanced API serializers to enhance things.
+# Some enhanced generic API serializers.
 # User and User Profile serializers.
 #
 
