@@ -17,6 +17,10 @@ from oauth2_provider.models import AccessToken
 from rest_framework import authentication, permissions
 from rest_framework import exceptions
 
+from django.core.exceptions import ObjectDoesNotExist
+
+from apps.accounts.models import UserProfile
+
 logger = logging.getLogger(__name__)
 
 
@@ -30,6 +34,7 @@ class APIAuthentication(authentication.BaseAuthentication):
         # TODO: Remove this later after all auth headers have been coded for.
         # return None
 
+        # Try Oauth2 authentication first
         if 'token' in request.COOKIES:
 
             # Get the encrypted access token data, fix any equal sign encoding.
@@ -47,6 +52,20 @@ class APIAuthentication(authentication.BaseAuthentication):
 
             result = OAuth2Authentication().authenticate(request)
             return result
+
+        # Try API_KEY authentication
+        if "HTTP_API_KEY" in request.META:
+            m_key = request.META.get('HTTP_API_KEY')
+
+            # Look up API key in UserProfile table.
+            try:
+                profile = UserProfile.objects.get(api_code=m_key)
+
+                if profile.user.is_active is True and profile.api_access is True:
+                    return True
+
+            except ObjectDoesNotExist:
+                pass
 
         raise exceptions.AuthenticationFailed('Valid API credentials were not provided.')
 
