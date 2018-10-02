@@ -88,7 +88,7 @@ def login_view(request, *args, **kwargs):
 
     else:
 
-        form = forms.SDAuthenticationForm()
+        form = forms.LoginForm()
         context = {
             'form': form,
             'next': request.GET['next'] if 'next' in request.GET else None,

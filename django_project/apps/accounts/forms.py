@@ -30,12 +30,12 @@ class AccountsUsersListForm (forms.Form):
     )
 
 
-class SDAuthenticationForm(forms.Form):
+class LoginForm(forms.Form):
 
     # Override the form user and password objects to work with Bootstrap
     username = forms.CharField(
         label=_('Username'),
-        max_length=254,
+        max_length=150,
         widget=forms.TextInput(attrs={
             'class': 'form-control',
             'required': 'true'
@@ -106,7 +106,7 @@ class UserCreateEditForm(forms.ModelForm):
 
     is_active = forms.BooleanField(
         label=_('Active'),
-        widget=forms.CheckboxInput(attrs={'class': 'toggle'}),
+        widget=forms.CheckboxInput(attrs={'class': 'custom-control-input'}),
         help_text=_("User will not be able to login if disabled"),
         required=False
     )
@@ -117,15 +117,15 @@ class UserCreateEditForm(forms.ModelForm):
         validators=[
             MinLengthValidator(3),
             MaxLengthValidator(150), ],
-        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': _('User name'), 'pattern': '{3,150}', 'required': '1'}),
-        help_text=_("Username must be a minimum of 3 characters and a maximum of 150 characters"),
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': _('User name'), 'pattern': '.{3,150}', 'required': '1'}),
+        help_text=_("Username must at least 3 characters"),
     )
 
     first_name = forms.CharField(
         label=_('First Name'),
         required=False,
         validators=[MinLengthValidator(3), MaxLengthValidator(30), ],
-        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': _('First Name'), 'pattern': '{0,30}'}),
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': _('First Name'), 'pattern': '.{0,30}'}),
         help_text=_("Maximum 30 characters"),
     )
 
@@ -133,7 +133,7 @@ class UserCreateEditForm(forms.ModelForm):
         label=_('Last Name'),
         required=False,
         validators=[MinLengthValidator(3), MaxLengthValidator(30), ],
-        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': _('Last Name'), 'pattern': '{0,30}'}),
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': _('Last Name'), 'pattern': '.{0,30}'}),
         help_text=_("Maximum 30 characters"),
     )
 
@@ -182,7 +182,7 @@ class UserCreateEditForm(forms.ModelForm):
 
     api_access = forms.BooleanField(
         label=_('API Access'),
-        widget=forms.CheckboxInput(attrs={'class': 'toggle'}),
+        widget=forms.CheckboxInput(attrs={'class': 'custom-control-input'}),
         required=False
     )
 

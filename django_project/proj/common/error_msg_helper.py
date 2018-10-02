@@ -30,8 +30,8 @@ def bootstrap_alert_message(msg, alert_type):
         alert_label = 'error'
 
     f_msg = """
-        <div class="alert alert-{0} alert-dismissable fade in">
-          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <div class="alert alert-{0} alert-dismissable fade show">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
           <strong>{1}:</strong> {2}.
         </div>
     """.format(alert_type, alert_label.title(), msg)

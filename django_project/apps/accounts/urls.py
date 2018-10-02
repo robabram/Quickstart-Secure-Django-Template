@@ -11,7 +11,7 @@ from django.contrib.auth.views import logout_then_login
 
 # Replacement oauth enabled views
 from apps.accounts.views import login_view
-from apps.accounts.forms import SDAuthenticationForm
+from apps.accounts.forms import LoginForm
 
 app_name = 'accounts'
 
@@ -24,7 +24,7 @@ urlpatterns = [
 
     # override django built-ins
     url(r'^login/', login_view,
-        {'template_name': 'accounts/login.html', 'authentication_form': SDAuthenticationForm,
+        {'template_name': 'accounts/login.html', 'authentication_form': LoginForm,
          'redirect_field_name': 'next'}, name='login'),
     url(r'^logout/', logout_then_login, name='logout'),
 
