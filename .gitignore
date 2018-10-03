@@ -1,6 +1,10 @@
 
 # Project specific ignores
 
+# npm packages and lock
+node_modules
+package-lock.json
+
 # Python virtual environment directory
 venv
 

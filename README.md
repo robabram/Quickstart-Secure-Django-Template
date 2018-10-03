@@ -3,6 +3,8 @@
 This is free quick start template for a secure Django web application using OAuth2 with server side encrypted tokens. 
 This template has all my favorite bits for a good secure Django web site.  Questions and contributions are welcome.  
 
+Online Demo: [http://django.silentdune.com/]
+
 ### Feature List
 
 *Note: Features are explained in more detail below* 

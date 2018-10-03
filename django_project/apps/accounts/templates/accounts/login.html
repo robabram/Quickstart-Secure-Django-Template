@@ -96,7 +96,7 @@ $('#login-form').submit( function (e) {
     user = $('#{{ form.username.id_for_label }}').val();
     pass = $('#{{ form.password.id_for_label }}').val();
 
-    $.post("/accounts/login/", {
+    $.post("accounts/login/", {
         grant_type : "password",
         username : user,
         password : pass
