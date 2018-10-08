@@ -5,6 +5,8 @@ This template has all my favorite bits for a good secure Django web site.  Quest
 
 Online Demo: http://django.silentdune.com/
 
+*Note: The demo login is: **admin/password**. These can be changed in proj.settings.base.*
+
 ### Feature List
 
 *Note: Features are explained in more detail below* 
@@ -54,7 +56,7 @@ The Quick Start Script does all the manual steps listed below for you.
 
 12. Run Django server: `python3 manage.py runserver`
 
-*Note: The default login credentials are: admin/password. These can be changed in proj.settings.base*
+
 
 ### Features    
 

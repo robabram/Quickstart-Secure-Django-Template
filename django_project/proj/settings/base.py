@@ -141,6 +141,8 @@ DATABASES = {
     }
 }
 
+# If you get the "Error: 1071, 'Specified key was too long; max key length is 767 bytes'"
+# when running migrate look at: https://github.com/celery/django-celery/issues/259
 CELERY_RESULT_BACKEND = 'django-db'
 
 # https://django-axes.readthedocs.io/en/latest/configuration.html#known-configuration-problems

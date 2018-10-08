@@ -27,7 +27,7 @@ django-ipware==2.1.0
 django-oauth-toolkit==1.2.0
 django-rest-swagger==2.2.0
 django-timezone-field==3.0
-django[argon2]==2.1.1
+django[argon2]==2.1.2
 djangorestframework==3.8.2
 idna==2.7                 # via cryptography, requests
 itypes==1.1.0             # via coreapi
