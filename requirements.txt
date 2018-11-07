@@ -44,7 +44,7 @@ python-dateutil==2.7.3
 pytz==2018.5              # via celery, django, django-axes, django-timezone-field
 pyuca==1.2
 rcssmin==1.0.6            # via django-compressor
-requests[security]==2.19.1
+requests[security]>=2.20
 rjsmin==1.0.12            # via django-compressor
 simplejson==3.16.0        # via django-rest-swagger
 six==1.11.0               # via argon2-cffi, cryptography, pip-tools, pyopenssl, python-dateutil
