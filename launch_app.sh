@@ -136,8 +136,6 @@ activate_venv
 export PYTHONPATH=`pwd`
 export DJANGO_SETTINGS_MODULE="django_project.proj.settings.local"
 
-source venv/bin/activate
-
 cd django_project
 
 echo -e "info: checking databases have been migrated..."
@@ -150,6 +148,9 @@ echo -e "info: loading example api data fixture..."
 python3 manage.py loaddata apps/api_example/fixtures/testdata.json
 
 echo -e "info: project is ready to run."
+echo -e ""
+echo -e "info: first activate virtual environment:"
+echo -e "info:    'source venv/bin/activate'"
 echo -e ""
 echo -e "info: to launch django server run:"
 echo -e "info:    'cd django_project; python3 manage.py runserver'"
