@@ -136,6 +136,8 @@ activate_venv
 export PYTHONPATH=`pwd`
 export DJANGO_SETTINGS_MODULE="django_project.proj.settings.local"
 
+source venv/bin/activate
+
 cd django_project
 
 echo -e "info: checking databases have been migrated..."
