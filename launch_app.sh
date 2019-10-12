@@ -134,7 +134,7 @@ activate_venv
 
 # Set environment required variables
 export PYTHONPATH=`pwd`
-export DJANGO_SETTINGS_MODULE="proj.settings.local"
+export DJANGO_SETTINGS_MODULE="django_project.proj.settings.local"
 
 cd django_project
 
@@ -148,6 +148,11 @@ echo -e "info: loading example api data fixture..."
 python3 manage.py loaddata apps/api_example/fixtures/testdata.json
 
 echo -e "info: project is ready to run."
-echo -e "info: now type 'python3 manage.py runserver' to launch application."
-
+echo -e ""
+echo -e "info: to launch django server run:"
+echo -e "info:    'cd django_project; python3 manage.py runserver'"
+echo -e ""
+echo -e "info: to launch uwsgi server run:"
+echo -e "info:    '/usr/local/Quickstart-Secure-Django-Template/venv/bin/uwsgi --ini /usr/local/Quickstart-Secure-Django-Template/django_project/proj/uwsgi.ini'"
+echo -e ""
 echo -e "done."

@@ -1,0 +1,17 @@
+[Unit]
+Description=uWSGI Quickstart Secure Django Template Service
+After=syslog.target
+
+[Service]
+EnvironmentFile=-/etc/sysconfig/uwsgi
+# Remember to run uwsgi from the virtual environment.
+ExecStart=/usr/local/Quickstart-Secure-Django-Template/venv/bin/uwsgi --ini /usr/local/Quickstart-Secure-Django-Template/django_project/proj/uwsgi.ini
+ExecReload=/bin/kill -HUP $MAINPID
+KillSignal=SIGINT
+Restart=always
+Type=notify
+StandardError=syslog
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target
