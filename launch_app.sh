@@ -147,6 +147,9 @@ python3 manage.py admin --init-oauth
 echo -e "info: loading example api data fixture..."
 python3 manage.py loaddata apps/api_example/fixtures/testdata.json
 
+echo -e "info: collecting static files..."
+python3 manage.py collectstatic --noinput
+
 echo -e "info: project is ready to run."
 echo -e ""
 echo -e "info: first activate virtual environment:"
