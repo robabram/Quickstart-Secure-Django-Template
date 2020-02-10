@@ -19,17 +19,33 @@ from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic.base import RedirectView
-
+from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
+from rest_framework import permissions
 from rest_framework import routers
-from proj.swagger import get_swagger_view
+
+from apps.api_example.api_viewsets import *
 from proj.settings.base import SWAGGER_DOCS_TITLE
 
-from proj.api_viewsets import *
-from apps.api_example.api_viewsets import *
+# from proj.api_viewsets import *
 
 admin.autodiscover()
 router = routers.DefaultRouter()
-schema_view = get_swagger_view(title=SWAGGER_DOCS_TITLE)
+
+
+schema_view = get_schema_view(
+   openapi.Info(
+      title=SWAGGER_DOCS_TITLE,
+      default_version='v1',
+      description="Test description",
+      terms_of_service="",
+      contact=openapi.Contact(email="contact@example.org"),
+      license=openapi.License(name="MIT License"),
+   ),
+   public=True,
+   permission_classes=(permissions.AllowAny,),
+)
+
 
 # API Notes:
 #     Non-Django model serializers must have 'base_name' manually set
@@ -47,7 +63,10 @@ urlpatterns = [
     url(r'^dashboard/', include('apps.dashboard.urls', namespace='dashboard')),
 
     # API urls
-    url(r'^api/docs/', schema_view),  # Note: APIs can be hidden in the docs by editing swagger.py
+    # url(r'^api/docs/', schema_view),  # Note: APIs can be hidden in the docs by editing swagger.py
+    url(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
+    url(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    url(r'^redoc/$', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     url(r'^api/', include(router.urls)),
 
     # Last - Redirect all to settings.LOGIN_REDIRECT_URL

@@ -76,7 +76,7 @@ INSTALLED_APPS = [
     'apps.accounts',
     'apps.dashboard',
     'apps.api_example',
-    'rest_framework_swagger',
+    'drf_yasg',
     'rest_framework',
     'oauth2_provider',
     'django_celery_results',
