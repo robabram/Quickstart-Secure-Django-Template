@@ -10,8 +10,9 @@ django-filter
 django-ipware
 django-oauth-toolkit
 djangorestframework
-django-rest-swagger
+# django-rest-swagger - Depreciated for drf-yasg
 django-timezone-field
+drf-yasg
 pip-tools
 pycountry
 python-dateutil
