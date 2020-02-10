@@ -15,7 +15,6 @@ from datetime import datetime
 from django.apps import apps
 from django.core.exceptions import ObjectDoesNotExist
 
-from apps.remotemonitor.tasks import user_model_action_event
 from proj.middleware import get_current_user
 
 # These are apps that should not be remotely logged
