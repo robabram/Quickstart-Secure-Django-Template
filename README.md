@@ -69,7 +69,7 @@ decrypting and refreshing of Oauth2 tokens.
 Views need only to have the appropriate django security function decorators.  
 
 
-**REST API w/ Swagger Documentation**
+**REST API with Swagger and ReDoc Documentation**
 
 A template for REST API is included with automatic API documentation using Swagger. A separate API
 authentication handler is available in proj.api_authentication.py. Rich API viewsets are available in 
