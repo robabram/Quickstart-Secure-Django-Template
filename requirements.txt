@@ -32,7 +32,7 @@ coreschema==0.0.4
     # via
     #   coreapi
     #   drf-yasg
-cryptography==2.8
+cryptography==3.3.2
     # via
     #   -r requirements.in
     #   pyopenssl
