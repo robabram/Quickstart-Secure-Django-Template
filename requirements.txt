@@ -49,7 +49,7 @@ cryptography==35.0.0
     #   jwcrypto
 deprecated==1.2.13
     # via jwcrypto
-django==3.2.9
+django==3.2.13
     # via
     #   -r requirements.in
     #   django-appconf
@@ -135,10 +135,8 @@ requests[security]==2.26.0
     #   django-oauth-toolkit
 rjsmin==1.1.0
     # via django-compressor
-ruamel.yaml==0.17.17
+ruamel-yaml==0.17.17
     # via drf-yasg
-ruamel.yaml.clib==0.2.6
-    # via ruamel.yaml
 six==1.16.0
     # via
     #   click-repl
