@@ -4,7 +4,7 @@
 #
 #    pip-compile
 #
-amqp==5.0.6
+amqp==5.1.1
     # via kombu
 argon2-cffi==21.1.0
     # via -r requirements.in
@@ -12,7 +12,7 @@ asgiref==3.4.1
     # via django
 billiard==3.6.4.0
     # via celery
-celery==5.2.2
+celery==5.2.7
     # via django-celery-results
 certifi==2021.10.8
     # via requests
@@ -63,7 +63,7 @@ django-appconf==1.0.5
     # via django-compressor
 django-axes==5.27.0
     # via -r requirements.in
-django-celery-results==2.2.0
+django-celery-results==2.4.0
     # via -r requirements.in
 django-compressor==2.4.1
     # via -r requirements.in
@@ -97,7 +97,7 @@ jinja2==3.0.3
     # via coreschema
 jwcrypto==1.0
     # via django-oauth-toolkit
-kombu==5.2.2
+kombu==5.2.4
     # via celery
 markupsafe==2.0.1
     # via jinja2
@@ -135,7 +135,7 @@ requests[security]==2.26.0
     #   django-oauth-toolkit
 rjsmin==1.1.0
     # via django-compressor
-ruamel.yaml==0.17.17
+ruamel-yaml==0.17.17
     # via drf-yasg
 six==1.16.0
     # via
